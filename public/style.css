@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #293264;
+}
+
+main {
+  margin: 0 auto;
+}
+
+button {
+  color: #293264;
+}
+
+button:focus {
+  outline: none;
+}
+
+.intro-container {
+  width: min(500px, 95%);
+  height: 90vh;
+  margin: 0 auto;
+  padding-block: 2em;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  gap: 2em;
+}
+.intro-container > * {
+  min-width: 0;
+}
+
+.quiz-container {
+  width: min(800px, 80vw);
+  margin: 0 auto;
+  padding-block: 2em;
+}
+
+form {
+  text-align: left;
+}
+
+.form-line {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  background: hsl(230, 61%, 86%);
+  padding: 0.4em 1em;
+  border-radius: 10px;
+}
+.form-line > * {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (max-width: 450px) {
+  .form-line {
+    flex-wrap: wrap;
+  }
+  .form-line > * {
+    flex-basis: 100%;
+    margin-block: 0.2em;
+  }
+}
+label {
+  margin-right: 1.5em;
+}
+.num-select,
+.cat-select {
+  /* width: 80px; */
+  background: #d6dbf5;
+  border: none;
+  padding: 0.2em;
+}
+
+.num-select {
+  /* width: min(250px, 80vw); */
+  text-indent: 0.2em;
+  text-align: center;
+}
+
+.qustion-sngl-container {
+  border-bottom: 1px solid gray;
+  padding-bottom: 1em;
+}
+
+.question {
+  font-size: 1.2rem;
+}
+
+.answers {
+  display: flex;
+  gap: 0.7em;
+}
+
+.sngl-answer {
+  background: transparent;
+  border: 1px solid #4d5b9e;
+  border-radius: 20px;
+  padding: 0.7em 1.2em;
+  flex-basis: 100%;
+}
+
+@media (max-width: 700px) {
+  .answers {
+    flex-wrap: wrap;
+  }
+  .sngl-answer {
+    width: 45%;
+    flex-basis: initial;
+  }
+}
+
+.sngl-answer.selected {
+  background: #d6dbf5;
+  border-color: white;
+}
+
+.sngl-answer.wrong-answer {
+  opacity: 50%;
+}
+
+.sngl-answer.correct-answer {
+  background: #94d7a2;
+  border: 1px solid white;
+}
+
+.wrong-answer:active,
+.correct-answer:active,
+.check-answers-btn.disabled:active {
+  transform: none;
+}
+
+.sngl-answer.selected.wrong-answer {
+  background: #f8bcbc;
+}
+
+.check-answers-btn,
+.new-quiz-btn,
+.start-quiz-btn {
+  display: block;
+  width: 10em;
+  max-width: 10em;
+  background: #4d5b9e;
+  color: white;
+  margin: 2em auto 0 auto;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 10px;
+}
+
+.check-answers-btn.disabled {
+  opacity: 50%;
+}
+
+.answer-all-msg {
+  margin-top: 0.5em;
+  color: gray;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.new-quiz-btn {
+  margin: 2em;
+}
+
+.check-answers:focus {
+  outline: none;
+}
+
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
